@@ -47,3 +47,31 @@ variable "ssh_location" {
   description   = "the ip address that can ssh into ec2 instances"
   type          = string
 }
+
+# RDS Variabls
+variable "db_snapshot_identifier" {
+  default       = "arn:aws:rds:us-east-1:889342371901:snapshot:rds-db-snapshot"
+  description   = "DB snpshot arn"
+  type          = string
+}
+
+# RDS instance class
+variable "db_instance_class" {
+  default       = "db.t2.micro"
+  description   = "DB instance type"
+  type          = string
+}
+
+# RDS instance identifier
+variable "db_instance_identifier" {
+  default       = "rds-db"
+  description   = "DB instance identifier"
+  type          = string
+}
+
+# RDS multi az deploymentidentifier
+variable "db_multi_az_deployment" {
+  default       = false
+  description   = "create a standby db instance"
+  type          = bool
+}
