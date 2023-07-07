@@ -117,3 +117,17 @@ variable "ec2_keypair_name" {
   description   = "ec2 keypair"
   type          = string
 }
+
+#route 53 variables
+variable "domain_name" {
+  default       = "lincolncloud.net"
+  description   = "domain name"
+  type          = string
+}
+
+#route 53 record type
+variable "record_name" {
+  default       = "www"
+  description   = "sub domain name"
+  type          = string
+}
